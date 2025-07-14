@@ -1,0 +1,5 @@
+.venv/
+.env
+backup.py
+config.py
+openaitest.py

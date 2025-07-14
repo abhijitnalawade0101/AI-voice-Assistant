@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Voice AI Assistant</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="layout">
+    <!-- 🧭 Sidebar -->
+    <div class="sidebar">
+      <h3>🕘 History</h3>
+      <div id="search-history" class="history-list"></div>
+    </div>
+
+    <!-- 🎤 Main Container -->
+    <div class="container">
+      <h2>🎤 Voice AI Assistant</h2>
+
+      <div id="user-query" class="box"></div>
+      <div id="ai-reply" class="box"></div>
+
+      <div class="text-input-container">
+        <textarea id="text-command" placeholder="Type your command here..." oninput="autoResize(this)"></textarea>
+        <button onclick="handleTextCommand()">Send</button>
+      </div>
+
+      <div class="button-container">
+        <button class="button" onclick="fetchVoiceChat()">
+          <i class="fas fa-microphone"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
